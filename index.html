@@ -1,0 +1,60 @@
+<html>
+  <head>
+   <link rel="stylesheet" type="text/css" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+     <script>
+       function wave1(){
+        var delay = 0;
+        var inc = 0.01;
+        var space = 0;
+        for(i=0; i<200; i++){
+          var div = document.createElement("div");
+          div.setAttribute("class","wave1");
+          div.setAttribute("style", "animation-delay :"+delay+"s; left:"+space+"vw;");
+
+          delay+=inc;
+          space+=0.5;
+          document.getElementById("container-wave").appendChild(div);
+        }
+      }
+
+      function wave2(){
+       var delay = 0.4;
+       var inc = 0.01;
+       var space = 0;
+       for(i=0; i<200; i++){
+         var div = document.createElement("div");
+         div.setAttribute("class","wave2");
+         div.setAttribute("style", "animation-delay :"+delay+"s; left:"+space+"vw;");
+
+         delay+=inc;
+         space+=0.5;
+         document.getElementById("container-wave").appendChild(div);
+       }
+     }
+
+     function wave3(){
+      var delay = 0.6;
+      var inc = 0.01;
+      var space = 0;
+      for(i=0; i<200; i++){
+        var div = document.createElement("div");
+        div.setAttribute("class","wave3");
+        div.setAttribute("style", "animation-delay :"+delay+"s; left:"+space+"vw;");
+
+        delay+=inc;
+        space+=0.5;
+        document.getElementById("container-wave").appendChild(div);
+      }
+    }
+    </script>
+  </head>
+<body onload="wave1(), wave2(), wave3()">
+  <div class="container">
+    <div class="message"><b>Sweet</b> wave</div>
+    <div id="container-wave">
+
+    </div>
+  </div>
+</body>
+</html>
